@@ -4,10 +4,8 @@ use unicode_segmentation::UnicodeSegmentation;
 use unicode_width::UnicodeWidthStr;
 
 mod lines_iterator;
-mod reader;
 
 pub use self::lines_iterator::{LinesIterator, Row};
-pub use self::reader::ProgressReader;
 
 /// The length and width of a part of a string.
 pub struct Prefix {
@@ -30,11 +28,11 @@ pub struct Prefix {
 /// Example:
 ///
 /// ```
-/// # extern crate cursive;
+/// # extern crate cursive_break;
 /// extern crate unicode_segmentation;
 /// use unicode_segmentation::UnicodeSegmentation;
 ///
-/// # use cursive::utils::prefix;
+/// # use cursive_break::utils::prefix;
 /// # fn main() {
 /// let my_text = "blah...";
 /// // This returns the number of bytes for a prefix of `my_text` that
